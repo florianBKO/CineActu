@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-
+// test
 export async function GET(request: Request) {
   console.log('api appel')
   const { searchParams } = new URL(request.url);

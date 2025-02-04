@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 
 
-        <div className="navbar bg-blue-400">
+        <div className="navbar bg-blue-400 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,8 +20,8 @@ import Image from 'next/image'
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li>
           <a>Film</a>
-          <ul className="p-2">
-            <li><a>Populaire</a></li>
+          <ul className="p-4" style={{ zIndex: 100 }}>
+          <li><a>Populaire10</a></li>
             <li><a>Du moment</a></li>
             <li><a>A venir</a></li>
             <li><a>Les mieux evalués</a></li>
