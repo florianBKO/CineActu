@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Card from './components/Card'
-import Carousel2 from './components/Carousel'
+import Card from './components/ui/Card'
+import Carousel2 from './components/ui/Carousel'
 
 interface Movie {
   id: number
@@ -24,19 +24,19 @@ export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([])
   const [carousel, setCarousel] = useState<Carousel[]>([])
   const [loading, setLoading] = useState(true)
-
+ console.log('test');
   // Récupérer les films populaires
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await fetch('http://sc2mejo7704.universe.wf/cine-actu/api/movie/popular')
+        const response = await fetch('/api/movie?type=popular');
         const data = await response.json()
-        
-        if (Array.isArray(data.data)) {
-          setMovies(data.data) // Mettre à jour les movies
+
+        if (Array.isArray(data.results)) {
+          setMovies(data.results) // Mettre à jour les movies
           
           // Extraire les poster_path pour le carousel
-          const posterPaths = data.data.map((movie: { poster_path: string }) => ({
+          const posterPaths = data.results.map((movie: { poster_path: string }) => ({
             poster_path: movie.poster_path,
           }))
           setCarousel(posterPaths)
