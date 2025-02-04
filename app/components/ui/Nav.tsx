@@ -20,7 +20,7 @@ import Image from 'next/image'
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <li>
           <a>Film</a>
-          <ul className="p-4" style={{ zIndex: 100 }}>
+          <ul className="p-8" style={{ zIndex: 100 }}>
           <li><a>Populaire10</a></li>
             <li><a>Du moment</a></li>
             <li><a>A venir</a></li>
